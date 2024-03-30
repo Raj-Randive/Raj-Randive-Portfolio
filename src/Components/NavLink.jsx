@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 
 function NavLink({ link }) {
   const pathName = usePathname();
-  console.log(pathName);
+  // console.log(pathName);
 
   return (
     <>

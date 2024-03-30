@@ -1,9 +1,18 @@
+"use client";
+import { motion } from "framer-motion";
 import React from "react";
 
 function SkillsPage() {
   return (
     <>
-      <div>Skills Page</div>
+      <motion.div
+        className="h-full"
+        initial={{ y: "-200vh" }}
+        animate={{ y: "0%" }}
+        transition={{ duration: 1 }}
+      >
+        Skills Page
+      </motion.div>
     </>
   );
 }
