@@ -12,11 +12,12 @@ export default function Home() {
         animate={{ y: "0%" }}
         transition={{ duration: 1 }}
       >
-        <div className="h-full flex flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 ">
+        <div className="h-full flex flex-col lg:flex-row lg:gap-20 px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 ">
           {/* ************ IMAGE CONTAINER ************ */}
           <div className="h-1/2 lg:h-full lg:w-1/2 relative">
             <Image
-              src="/photo2.png"
+              // src="/photo2.png"
+              src="/photo_ff.png"
               alt="Profile-Photo"
               fill
               className="object-contain"
