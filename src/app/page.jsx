@@ -3,11 +3,18 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import "./homeStyles.css";
 
+import Typewriter from "typewriter-effect";
+
+// new Typewriter('#typewriter', {
+//   strings: ['Hello', 'World'],
+//   autoStart: true,
+// });
+
 export default function Home() {
   return (
     <>
       <motion.div
-        className="h-full"
+        className="h-full z-30"
         initial={{ y: "-200vh" }}
         animate={{ y: "0%" }}
         transition={{ duration: 1 }}
@@ -34,15 +41,30 @@ export default function Home() {
           {/* ************ TEXT CONTAINER ************ */}
           <div className="lg:h-full lg:w-1/2 flex flex-col gap-8 items-center justify-center text-white">
             {/* TITLE */}
-            <h1 className="text-3xl md:text-5xl font-bold">
-              Crafting Digital Experiences, Designing Tomorrow
+            <h1 className="text-3xl md:text-5xl font-bold text-left w-full">
+              <Typewriter
+                options={{
+                  strings: [
+                    "Full Stack Developer",
+                    "Android Developer",
+                    "DevOps Engineer",
+                    "Freelancer",
+                  ],
+                  autoStart: true,
+                  loop: true,
+                  devMode: true,
+                }}
+              />
             </h1>
             {/* DESC */}
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio
-              fugit rem exercitationem culpa pariatur dolores, necessitatibus
-              quisquam facilis repellat sint quam ex soluta? Assumenda est
-              itaque vero soluta placeat ducimus!
+            <p className="text-justify">
+              Hi, I'm Raj Randive, a third-year CSE undergrad with a passion for
+              problem-solving and collaboration. I thrive in team environments
+              and love tackling real-world challenges. From Competitive
+              Programming to Software Development, I'm always eager to learn and
+              explore new technologies. As a web developer, I specialize in
+              creating user-friendly websites that leave a lasting impression.
+              Let's collaborate and bring your online vision to life!
             </p>
             {/* BUTTONS */}
             <div className="flex gap-4 w-full">

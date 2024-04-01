@@ -26,7 +26,7 @@
 
 #imgContainer #content {
     position: absolute;
-    inset: 20px;
+    inset: 10px;
     border: 4px solid white;
     z-index: 5;
     border-radius: 50%;
@@ -40,10 +40,11 @@
     inset: 10px;
     /* background: repeating-conic-gradient(from var(--a), #ffa31d, #ef5454, #9e1f63, #392d91, #658715, #006663, #FFAF45); */
     /* background: repeating-conic-gradient(from var(--a), #40A2E3, #535C91, #352590, #1D24CA, #98ABEE, #836FFF, #241ab8); */
-    background: repeating-conic-gradient(from var(--a), #aa00ff, #9600ff, #6f00ff, #5512fb, #3c00ff);
     /* background: repeating-conic-gradient(from var(--a), #0f0, #ff0, #0ff, #f0f, #0ff); */
+    background: repeating-conic-gradient(from var(--a), #aa00ff, #9600ff, #6f00ff, #5512fb, #3c00ff);
+    /* background: repeating-conic-gradient(from var(--a), #3c00ff, #844da3, #663b94, #431c76, #221c69); */
     border-radius: 50%;
-    animation: rotating 10s linear infinite;
+    animation: rotating 8s linear infinite;
 
 }
 
@@ -55,10 +56,11 @@
     border-radius: 50%;
     /* background: repeating-conic-gradient(from var(--a), #0f0, #ff0, #0ff, #f0f, #0ff); */
     /* background: repeating-conic-gradient(from var(--a), #ffa31d, #ef5454, #9e1f63, #392d91, #658715, #006663, #FFAF45); */
-    background: repeating-conic-gradient(from var(--a), #aa00ff, #9600ff, #6f00ff, #5512fb, #3c00ff);
     /* background: repeating-conic-gradient(from var(--a), #40A2E3, #535C91, #352590, #1D24CA, #98ABEE, #836FFF, #241ab8); */
-    animation: rotating 10s linear infinite;
-    filter: blur(25px);
+    background: repeating-conic-gradient(from var(--a), #aa00ff, #9600ff, #6f00ff, #5512fb, #3c00ff);
+    /* background: repeating-conic-gradient(from var(--a), #3c00ff, #844da3, #663b94, #431c76, #221c69); */
+    animation: rotating 8s linear infinite;
+    filter: blur(10px);
     z-index: 2;
 }
 
