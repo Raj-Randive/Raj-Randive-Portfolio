@@ -38,9 +38,11 @@
     position: absolute;
     content: '';
     inset: 10px;
-    background: repeating-conic-gradient(from var(--a), #0f0, #ff0, #0ff, #f0f, #0ff);
+    /* background: repeating-conic-gradient(from var(--a), #ffa31d, #ef5454, #9e1f63, #392d91, #658715, #006663, #FFAF45); */
+    background: repeating-conic-gradient(from var(--a), #40A2E3, #535C91, #352590, #1D24CA, #98ABEE, #836FFF, #241ab8);
+    /* background: repeating-conic-gradient(from var(--a), #0f0, #ff0, #0ff, #f0f, #0ff); */
     border-radius: 50%;
-    animation: rotating 12s linear infinite;
+    animation: rotating 10s linear infinite;
 
 }
 
@@ -50,9 +52,11 @@
     content: '';
     inset: 0;
     border-radius: 50%;
-    background: repeating-conic-gradient(from var(--a), #0f0, #ff0, #0ff, #f0f, #0ff);
-    animation: rotating 12s linear infinite;
-    filter: blur(20px);
+    /* background: repeating-conic-gradient(from var(--a), #0f0, #ff0, #0ff, #f0f, #0ff); */
+    /* background: repeating-conic-gradient(from var(--a), #ffa31d, #ef5454, #9e1f63, #392d91, #658715, #006663, #FFAF45); */
+    background: repeating-conic-gradient(from var(--a), #40A2E3, #535C91, #352590, #1D24CA, #98ABEE, #836FFF, #241ab8);
+    animation: rotating 10s linear infinite;
+    filter: blur(25px);
     z-index: 2;
 }
 
