@@ -13,11 +13,11 @@ function TransitionProvider({ children }) {
       <div
         key={pathName}
         // className="w-screen h-screen bg-gradient-to-b from-blue-200 to-red-200"
-        className="w-screen h-screen bg-[#0C0C0C]"
+        className="w-screen h-screen bg-[#0c0c0ce2]"
       >
         {/* ANIMATION DIV FOR PAGE TRANSITIONS */}
         <motion.div
-          className="h-screen w-screen fixed bg-stone-500 rounded-b-3xl z-40"
+          className="h-screen w-screen fixed bg-stone-400 rounded-b-3xl z-40"
           animate={{ height: "0vh" }}
           exit={{ height: "140vh" }}
           transition={{ duration: 0.5, ease: "easeOut" }}
@@ -35,7 +35,7 @@ function TransitionProvider({ children }) {
         </motion.div>
 
         <motion.div
-          className="h-screen w-screen fixed bg-stone-500 rounded-t-3xl bottom-0 z-30"
+          className="h-screen w-screen fixed bg-stone-400 rounded-t-3xl bottom-0 z-30"
           initial={{ height: "140vh" }}
           animate={{ height: "0vh", transition: { delay: 0.5 } }}
         />

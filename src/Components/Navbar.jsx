@@ -74,7 +74,7 @@ function Navbar() {
 
   return (
     <>
-      <div className="bg-[#000000] h-full flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 text-base font-semibold text-white">
+      <div className="border-b-2 border-slate-600 border-t-0 bg-[#000000] h-full flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 text-base font-semibold text-white">
         {/* **************** Name ****************  */}
         <div
           className={`md:flex lg:text-4xl text-3xl ${pacifico.className}`}
