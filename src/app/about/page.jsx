@@ -24,7 +24,7 @@ function AboutPage() {
       >
         {/************************** CONTAINER **************************/}
         <div
-          className="h-full overflow-scroll lg:flex overflow-x-hidden"
+          className="h-full overflow-scroll lg:flex overflow-x-hidden text-white"
           ref={containerRef}
         >
           {/* TEXT CONTAINER */}

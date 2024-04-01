@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import "./homeStyles.css";
 
 export default function Home() {
   return (
@@ -12,20 +13,27 @@ export default function Home() {
         animate={{ y: "0%" }}
         transition={{ duration: 1 }}
       >
-        <div className="h-full flex flex-col lg:flex-row lg:gap-20 px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 ">
+        <div className="h-full flex flex-col lg:flex-row lg:gap-20 px-4 sm:px-8 sm:justify-center sm:items-center md:px-14 lg:px-20 xl:px-48 gap-16 overflow-scroll overflow-x-hidden">
           {/* ************ IMAGE CONTAINER ************ */}
-          <div className="h-1/2 lg:h-full lg:w-1/2 relative">
-            <Image
-              // src="/photo2.png"
-              src="/photo_ff.png"
-              alt="Profile-Photo"
-              fill
-              className="object-contain"
-            />
+          <div
+            className="lg:h-full lg:w-1/2 flex justify-center items-center"
+            id="box"
+          >
+            <div className="relative" id="imgContainer">
+              <div className="" id="content">
+                <Image
+                  src="/photo_ff.png"
+                  alt="Profile-Photo"
+                  fill
+                  className="object-contain"
+                  id="profilePic"
+                />
+              </div>
+            </div>
           </div>
 
           {/* ************ TEXT CONTAINER ************ */}
-          <div className="h-1/2 lg:h-full lg:w-1/2 flex flex-col gap-8 items-center justify-center ">
+          <div className="lg:h-full lg:w-1/2 flex flex-col gap-8 items-center justify-center text-white">
             {/* TITLE */}
             <h1 className="text-3xl md:text-5xl font-bold">
               Crafting Digital Experiences, Designing Tomorrow

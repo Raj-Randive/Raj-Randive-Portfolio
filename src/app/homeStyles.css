@@ -1,0 +1,150 @@
+/* #box {
+}
+
+#box::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-conic-gradient(at top, yellow, red);
+} */
+
+
+#profilePic {
+    border-radius: 50%;
+    z-index: 3;
+    /* border: 2px solid brown; */
+    animation: rotating 3s linear infinite;
+}
+
+#imgContainer {
+    height: 30rem;
+    width: 30rem;
+    border-radius: 50%;
+    background: #000;
+    position: relative;
+}
+
+#imgContainer #content {
+    position: absolute;
+    inset: 20px;
+    border: 4px solid white;
+    z-index: 5;
+    border-radius: 50%;
+}
+
+
+
+#imgContainer::before {
+    position: absolute;
+    content: '';
+    inset: 10px;
+    background: repeating-conic-gradient(from var(--a), #0f0, #ff0, #0ff, #f0f, #0ff);
+    border-radius: 50%;
+    animation: rotating 4s linear infinite;
+
+}
+
+
+#imgContainer::after {
+    position: absolute;
+    content: '';
+    inset: 0;
+    border-radius: 50%;
+    background: repeating-conic-gradient(from var(--a), #0f0, #ff0, #0ff, #f0f, #0ff);
+    animation: rotating 4s linear infinite;
+    filter: blur(20px);
+    z-index: 2;
+}
+
+
+
+
+/* background: repeating-conic-gradient(from var(--a), 
+#ffa31d, #ef5454, #9e1f63, #392d91,#658715, #006663, #111111); */
+
+
+
+@property --a {
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 0deg;
+}
+
+@keyframes rotating {
+    0% {
+        --a: 0deg;
+    }
+
+    100% {
+        --a: 360deg;
+    }
+}
+
+
+@media (width > 1500px) {
+    #imgContainer {
+        height: 29rem;
+        width: 29rem;
+    }
+
+}
+
+@media (width > 1250px) and (width <=1480px) {
+    #imgContainer {
+        height: 24rem;
+        width: 24rem;
+    }
+
+}
+
+@media (width <=1250px) {
+    #imgContainer {
+        height: 23rem;
+        width: 23rem;
+    }
+
+}
+
+@media (width > 1025px) and (width <=1165px) {
+    #imgContainer {
+        height: 20rem;
+        width: 20rem;
+    }
+
+}
+
+@media (width <=1025px) {
+    #imgContainer {
+        margin-top: 2rem;
+        height: 19rem;
+        width: 19rem;
+    }
+
+}
+
+@media (width <=440px) {
+    #imgContainer {
+        margin-top: 2rem;
+        height: 18rem;
+        width: 18rem;
+    }
+}
+
+@media (width > 880px) {
+    #menubutton {
+        display: none;
+
+    }
+}
+
+
+@media (width <=880px) {
+    #menubutton {
+        visibility: visible;
+    }
+
+    #lin {
+        display: none;
+    }
+
+}

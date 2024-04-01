@@ -1,8 +1,16 @@
 "use client";
+import { Pacifico } from "@next/font/google";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import React, { useState } from "react";
+import "../app/homeStyles.css";
 import NavLink from "./NavLink";
+
+const pacifico = Pacifico({
+  weight: ["400"],
+  style: ["normal"],
+  subsets: ["latin"],
+});
 
 const links = [
   { url: "/", title: "Home" },
@@ -22,7 +30,6 @@ function Navbar() {
     },
     open: {
       rotate: 45,
-      backgroundColor: "rgb(255, 255, 255)",
     },
   };
 
@@ -41,7 +48,6 @@ function Navbar() {
     },
     open: {
       rotate: -45,
-      backgroundColor: "rgb(255, 255, 255)",
     },
   };
 
@@ -68,12 +74,17 @@ function Navbar() {
 
   return (
     <>
-      <div className="h-full flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 text-base font-semibold">
+      <div className="bg-[#000000] h-full flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 text-base font-semibold text-white">
         {/* **************** Name ****************  */}
-        <div className="hidden md:flex text-2xl">Raj Randive</div>
+        <div
+          className={`md:flex lg:text-4xl text-3xl ${pacifico.className}`}
+          id="nme"
+        >
+          Raj Randive
+        </div>
 
-        {/******************** logo ********************/}
-        <div className="md:hidden lg:flex">
+        {/* ******************* logo ******************* */}
+        {/* <div className="md:hidden lg:flex">
           <Link
             href="/"
             className="text-sm bg-black rounded-md p-1 font-semibold flex items-center justify-center"
@@ -83,10 +94,10 @@ function Navbar() {
               .dev
             </span>
           </Link>
-        </div>
+        </div> */}
 
         {/* **************** Links ****************  */}
-        <div className="hidden md:flex gap-8">
+        <div className="hidden md:flex gap-8" id="lin">
           {links.map((eachlinks) => (
             <NavLink link={eachlinks} key={eachlinks.title} />
           ))}
@@ -94,7 +105,7 @@ function Navbar() {
 
         {/******************** Responsive Menu ********************/}
 
-        <div className="md:hidden">
+        <div className="" id="menubutton">
           {/*************** MENU BUTTON ***************/}
           <button
             className="w-8 h-10 flex flex-col justify-evenly z-50 relative"
@@ -103,17 +114,17 @@ function Navbar() {
             <motion.div
               variants={topVariants}
               animate={open ? "open" : "closed"}
-              className="w-8 h-1 bg-black rounded origin-left"
+              className="w-8 h-1 bg-white rounded origin-left"
             ></motion.div>
             <motion.div
               variants={centerVariants}
               animate={open ? "open" : "closed"}
-              className="w-8 h-1 bg-black rounded"
+              className="w-8 h-1 bg-white rounded"
             ></motion.div>
             <motion.div
               variants={bottomVariants}
               animate={open ? "open" : "closed"}
-              className="w-8 h-1 bg-black rounded origin-left"
+              className="w-8 h-1 bg-white rounded origin-left"
             ></motion.div>
           </button>
 
