@@ -75,7 +75,7 @@ export default function Home() {
               Programming to Software Development, I'm always eager to learn and
               explore new technologies. As a web developer, I specialize in
               creating user-friendly websites that leave a lasting impression.
-              Let's collaborate and bring your online vision to life!
+              <p>Let's collaborate and bring your online vision to life!</p>
             </p>
             {/* BUTTONS */}
             <div className="flex gap-4 w-full mb-16">
