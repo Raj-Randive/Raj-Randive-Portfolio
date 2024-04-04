@@ -49,12 +49,12 @@ export default function Home() {
           >
             {/* TITLE */}
             <h1
-              className={`text-2xl md:text-2xl lg:text-3xl font-bold text-center md:text-left lg:text-left  w-full nameType ${majorMonoDisplay.className}`}
+              className={`text-xl md:text-2xl lg:text-3xl font-bold text-center md:text-left lg:text-left  w-full nameType ${majorMonoDisplay.className}`}
             >
               <Typewriter
                 options={{
                   strings: [
-                    "full stAck deVeloper",
+                    "fullstAck deVeloper",
                     "Android deVeloper",
                     "deVops engineer",
                     "freelancer",

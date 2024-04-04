@@ -115,7 +115,7 @@
 
 }
 
-@media (width > 400px) and (width <=640px) {
+@media (width > 470px) and (width <=640px) {
     #mainImgContainer {
         margin-top: 2rem;
 
@@ -124,6 +124,21 @@
     #imgContainer {
         height: 33rem;
         width: 24rem;
+    }
+
+    #textBox {
+        padding: 0 2rem 0 2rem;
+    }
+}
+
+@media (width <=470px) {
+    #mainImgContainer {
+        margin-top: 2rem;
+    }
+
+    #imgContainer {
+        height: 27rem;
+        width: 20rem;
     }
 
     #textBox {
