@@ -1,4 +1,3 @@
-import Navbar from "@/Components/Navbar";
 import StartsCanvas from "@/Components/StarBackground";
 import TransitionProvider from "@/Components/TransitionProvider";
 import { Inter } from "next/font/google";

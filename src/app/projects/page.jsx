@@ -1,8 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import React from "react";
-
-function SkillsPage() {
+function ProjectPage() {
   return (
     <>
       <motion.div
@@ -11,10 +10,11 @@ function SkillsPage() {
         animate={{ y: "0%" }}
         transition={{ duration: 1 }}
       >
-        Skills Page
+        {/************************** CONTAINER **************************/}
+        <div className="text-white text-xl">Under Construction</div>
       </motion.div>
     </>
   );
 }
 
-export default SkillsPage;
+export default ProjectPage;

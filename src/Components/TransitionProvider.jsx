@@ -2,6 +2,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import React from "react";
+import Footer from "./Footer";
 import Navbar from "./Navbar";
 
 function TransitionProvider({ children }) {
@@ -13,7 +14,8 @@ function TransitionProvider({ children }) {
       <div
         key={pathName}
         // className="w-screen h-screen bg-gradient-to-b from-blue-200 to-red-200"
-        className="w-screen h-screen bg-[#070F2B]"
+        // className="w-screen h-screen bg-[#080e26]"
+        className="w-screen h-screen bg-[#131313]"
       >
         {/* ANIMATION DIV FOR PAGE TRANSITIONS */}
         <motion.div
@@ -47,6 +49,10 @@ function TransitionProvider({ children }) {
         {/* CHILDREN DIV */}
         <div className="h-[calc(100vh-4rem)]">{children}</div>
       </div>
+      {/* DIV-2 ****************** Footer *********************/}
+      {/* <div id="footer">
+        <Footer />
+      </div> */}
     </AnimatePresence>
   );
 }

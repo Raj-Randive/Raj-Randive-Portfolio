@@ -1,37 +1,41 @@
 "use client";
+import Footer from "@/Components/Footer";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import "./homeStyles.css";
-
 import Typewriter from "typewriter-effect";
-
-// new Typewriter('#typewriter', {
-//   strings: ['Hello', 'World'],
-//   autoStart: true,
-// });
+import { comfortaa, majorMonoDisplay } from "./fonts.js";
+import "./homeStyles.css";
 
 export default function Home() {
   return (
     <>
       <motion.div
-        className="h-full z-30"
+        className="h-full z-30 overflow-x-hidden overflow-scroll"
+        id="mainContainer"
         initial={{ y: "-200vh" }}
         animate={{ y: "0%" }}
         transition={{ duration: 1 }}
       >
-        <div className="h-full flex flex-col lg:flex-row lg:gap-20 px-4 sm:px-8 sm:justify-center sm:items-center md:px-14 lg:px-20 xl:px-48 gap-16 overflow-scroll overflow-x-hidden">
+        <div
+          id="upperContainer"
+          className="h-full flex flex-col lg:flex-row gap-16 lg:gap-12 px-4 sm:px-8 md:px-14 lg:px-16 xl:px-44"
+        >
           {/* ************ IMAGE CONTAINER ************ */}
           <div
             className="lg:h-full lg:w-1/2 flex justify-center items-center"
             id="box"
           >
-            <div className="relative" id="imgContainer">
-              <div className="" id="content">
+            <div
+              className="bg-black border-white border-2 p-2"
+              id="mainImgContainer"
+            >
+              <div className="relative w-auto " id="imgContainer">
                 <Image
-                  src="/photo_ff.png"
+                  src="/pp5.jpg"
                   alt="Profile-Photo"
                   fill
-                  className="object-contain"
+                  className="object-fill rounded-3xl shadow-xl"
+                  sizes="40"
                   id="profilePic"
                 />
               </div>
@@ -39,25 +43,32 @@ export default function Home() {
           </div>
 
           {/* ************ TEXT CONTAINER ************ */}
-          <div className="lg:h-full lg:w-1/2 flex flex-col gap-8 items-center justify-center text-white">
+          <div
+            className="lg:h-full lg:w-1/2 flex flex-col gap-8 items-center justify-center text-white"
+            id="textBox"
+          >
             {/* TITLE */}
-            <h1 className="text-3xl md:text-5xl font-bold text-left w-full">
+            <h1
+              className={`text-2xl md:text-2xl lg:text-3xl font-bold text-center md:text-left lg:text-left  w-full nameType ${majorMonoDisplay.className}`}
+            >
               <Typewriter
                 options={{
                   strings: [
-                    "Full Stack Developer",
-                    "Android Developer",
-                    "DevOps Engineer",
-                    "Freelancer",
+                    "full stAck deVeloper",
+                    "Android deVeloper",
+                    "deVops engineer",
+                    "freelancer",
                   ],
+                  delay: 80,
+                  pauseFor: 1500,
                   autoStart: true,
                   loop: true,
-                  devMode: true,
+                  devMode: false,
                 }}
               />
             </h1>
             {/* DESC */}
-            <p className="text-justify">
+            <p className={`text-justify ${comfortaa.className}`}>
               Hi, I'm Raj Randive, a third-year CSE undergrad with a passion for
               problem-solving and collaboration. I thrive in team environments
               and love tackling real-world challenges. From Competitive
@@ -67,12 +78,16 @@ export default function Home() {
               Let's collaborate and bring your online vision to life!
             </p>
             {/* BUTTONS */}
-            <div className="flex gap-4 w-full">
-              <button className="p-4 rounded-lg ring-1 ring-black text-white bg-black ">
-                View My Work
+            <div className="flex gap-4 w-full mb-16">
+              <button
+                className={`p-4 rounded-lg ring-1 ring-black text-white bg-black ${majorMonoDisplay.className}`}
+              >
+                resume
               </button>
-              <button className="p-4 rounded-lg ring-1 ring-black ">
-                Contact Me
+              <button
+                className={`p-4 rounded-lg ring-1 ring-black ${majorMonoDisplay.className}`}
+              >
+                contact me
               </button>
             </div>
           </div>

@@ -11,7 +11,8 @@ function ContactPage() {
         animate={{ y: "0%" }}
         transition={{ duration: 1 }}
       >
-        Contact Page
+        {/************************** CONTAINER **************************/}
+        <div className="text-white text-xl">Under Construction</div>
       </motion.div>
     </>
   );

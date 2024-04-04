@@ -1,24 +1,16 @@
 "use client";
-import { Pacifico } from "@next/font/google";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import React, { useState } from "react";
+import { majorMonoDisplay } from "../app/fonts.js";
 import "../app/homeStyles.css";
 import NavLink from "./NavLink";
-
-const pacifico = Pacifico({
-  weight: ["400"],
-  style: ["normal"],
-  subsets: ["latin"],
-});
 
 const links = [
   { url: "/", title: "Home" },
   { url: "/about", title: "About" },
-  { url: "/work", title: "Work" },
-  { url: "/skills", title: "Skills" },
-  { url: "/achievements", title: "Achievements" },
-  { url: "/contact", title: "Contact" },
+  { url: "/projects", title: "projects" },
+  { url: "/contact", title: "contact" },
 ];
 
 function Navbar() {
@@ -77,27 +69,17 @@ function Navbar() {
       <div className="border-b-2 border-slate-600 border-t-0 bg-[#000000] h-full flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 text-base font-semibold text-white z-35">
         {/* **************** Name ****************  */}
         <div
-          className={`md:flex lg:text-3xl text-2xl ${pacifico.className}`}
-          id="nme"
+          className={`md:flex lg:text-3xl text-2xl font-extrabold ${majorMonoDisplay.className}`}
+          id="name"
         >
-          Raj Randive
+          rAj rAndiVe
         </div>
 
-        {/* ******************* logo ******************* */}
-        {/* <div className="md:hidden lg:flex">
-          <Link
-            href="/"
-            className="text-sm bg-black rounded-md p-1 font-semibold flex items-center justify-center"
-          >
-            <span className=" text-white mr-1"> Raj </span>
-            <span className="w-12 h-8 rounded bg-white text-black flex items-center justify-center">
-              .dev
-            </span>
-          </Link>
-        </div> */}
-
         {/* **************** Links ****************  */}
-        <div className="hidden md:flex gap-8" id="lin">
+        <div
+          className={`hidden md:flex gap-8 ${majorMonoDisplay.className}`}
+          id="lin"
+        >
           {links.map((eachlinks) => (
             <NavLink link={eachlinks} key={eachlinks.title} />
           ))}
@@ -108,23 +90,23 @@ function Navbar() {
         <div className="" id="menubutton">
           {/*************** MENU BUTTON ***************/}
           <button
-            className="w-8 h-10 flex flex-col justify-evenly z-50 relative"
+            className="w-7 h-9 flex flex-col justify-evenly z-50 relative"
             onClick={() => setOpen((prev) => !prev)}
           >
             <motion.div
               variants={topVariants}
               animate={open ? "open" : "closed"}
-              className="w-8 h-1 bg-white rounded origin-left"
+              className="w-7 h-0.5 bg-white rounded origin-left"
             ></motion.div>
             <motion.div
               variants={centerVariants}
               animate={open ? "open" : "closed"}
-              className="w-8 h-1 bg-white rounded"
+              className="w-7 h-0.5 bg-white rounded"
             ></motion.div>
             <motion.div
               variants={bottomVariants}
               animate={open ? "open" : "closed"}
-              className="w-8 h-1 bg-white rounded origin-left"
+              className="w-7 h-0.5 bg-white rounded origin-left"
             ></motion.div>
           </button>
 
@@ -139,7 +121,7 @@ function Navbar() {
               {links.map((eachLink) => (
                 <motion.div
                   variants={listItemVariants}
-                  className=""
+                  className={`${majorMonoDisplay.className}`}
                   key={eachLink.title}
                 >
                   <Link href={eachLink.url}>{eachLink.title}</Link>
