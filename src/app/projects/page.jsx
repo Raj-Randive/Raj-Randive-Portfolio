@@ -5,10 +5,10 @@ function ProjectPage() {
   return (
     <>
       <motion.div
+        initial={{ x: "-100%" }}
+        animate={{ x: "0%" }}
+        transition={{ duration: 0.8, ease: "easeIn" }}
         className="h-full"
-        initial={{ y: "-200vh" }}
-        animate={{ y: "0%" }}
-        transition={{ duration: 1 }}
       >
         {/************************** CONTAINER **************************/}
         <div className="text-white text-xl">Under Construction</div>

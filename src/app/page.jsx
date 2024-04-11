@@ -1,5 +1,6 @@
 "use client";
-import Footer from "@/Components/Footer";
+import AnimatedText from "@/Components/AnimatedText.jsx";
+import TransitionEffect from "@/Components/TransitionEffect.jsx";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Typewriter from "typewriter-effect";
@@ -10,15 +11,15 @@ export default function Home() {
   return (
     <>
       <motion.div
-        className="h-full z-30 overflow-x-hidden overflow-scroll"
+        initial={{ x: "-100%" }}
+        animate={{ x: "0%" }}
+        transition={{ duration: 0.8, ease: "easeIn" }}
+        className="min-h-screen z-30 flex flex-col"
         id="mainContainer"
-        initial={{ y: "-200vh" }}
-        animate={{ y: "0%" }}
-        transition={{ duration: 1 }}
       >
         <div
-          id="upperContainer"
-          className="h-full flex flex-col lg:flex-row gap-16 lg:gap-12 px-4 sm:px-8 md:px-14 lg:px-16 xl:px-44"
+          id="mainCon"
+          className="h-full flex flex-col lg:flex-row xl:flex-row gap-16 lg:gap-12 px-4 sm:px-8 md:px-14 lg:px-16 xl:px-44"
         >
           {/* ************ IMAGE CONTAINER ************ */}
           <div
@@ -68,15 +69,15 @@ export default function Home() {
               />
             </h1>
             {/* DESC */}
-            <p className={`text-justify ${comfortaa.className}`}>
+            <div className={`text-justify ${comfortaa.className}`}>
               Hi, I'm Raj Randive, a third-year CSE undergrad with a passion for
               problem-solving and collaboration. I thrive in team environments
               and love tackling real-world challenges. From Competitive
               Programming to Software Development, I'm always eager to learn and
               explore new technologies. As a web developer, I specialize in
               creating user-friendly websites that leave a lasting impression.
-              <p>Let's collaborate and bring your online vision to life!</p>
-            </p>
+              <div>Let's collaborate and bring your online vision to life!</div>
+            </div>
             {/* BUTTONS */}
             <div className="flex gap-4 w-full mb-16">
               <button

@@ -2,9 +2,9 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import React, { useState } from "react";
-import { majorMonoDisplay } from "../app/fonts.js";
-import "../app/homeStyles.css";
-import NavLink from "./NavLink";
+import { majorMonoDisplay } from "../../app/fonts.js";
+import "../../app/homeStyles.css";
+import NavLink from "./NavLink.jsx";
 
 const links = [
   { url: "/", title: "Home" },
