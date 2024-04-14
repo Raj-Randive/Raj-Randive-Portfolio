@@ -3,7 +3,7 @@ import {
   Josefin_Sans,
   Major_Mono_Display,
   Oxygen,
-} from "@next/font/google";
+} from "next/font/google";
 
 const majorMonoDisplay = Major_Mono_Display({
   weight: ["400"],

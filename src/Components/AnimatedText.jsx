@@ -22,7 +22,7 @@ const singleWordeVariants = {
     opacity: 1,
     y: 0,
     transition: {
-      // delay: 1.2,
+      delay: 1.2,
       duration: 1,
     },
   },
@@ -31,9 +31,9 @@ const singleWordeVariants = {
 function AnimatedText({ text, className }) {
   return (
     <>
-      <div className="w-full mx-auto py-0 lg:py-2 flex items-center justify-center text-center overflow-hidden">
+      <div className="w-full mx-auto py-0 lg:py-2 flex items-center justify-center text-center overflow-hidden ">
         <motion.h1
-          className={`inline-block w-full text-white font-bold ${className} `}
+          className={`inline-block w-full text-white font-bold ${className}`}
           variants={quoteVariants}
           initial="initial"
           animate="animate"

@@ -22,12 +22,12 @@ const links = [
 function Footer() {
   return (
     <>
-      <div className="h-56 box-border bg-black text-white flex justify-center items-center relative z-35">
+      <div className="h-64 box-border bg-black text-white flex justify-center items-center relative z-35">
         {/* top div LINE*/}
         <div className="w-full absolute top-0 h-0.5 bg-white"></div>
         {/* Left */}
         <div
-          className="flex flex-col justify-center items-center gap-4 h-52 md:w-1/2 lg:w-1/3 xl:w-1/3 lg:h-52 xl:h-52 md:flex md:justify-center md:items-end md:flex-col md:gap-8 md:mr-8"
+          className="flex flex-col justify-center items-center gap-8 h-52 md:w-1/2 lg:w-1/3 xl:w-1/3 lg:h-52 xl:h-52 md:flex md:justify-center md:items-end md:flex-col md:gap-8 md:mr-8"
           id="left"
         >
           <h2 className={`text-3xl  ${majorMonoDisplay.className}`}>
