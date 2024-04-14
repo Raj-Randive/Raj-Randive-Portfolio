@@ -11,9 +11,12 @@ export default function Home() {
   return (
     <>
       <motion.div
-        initial={{ x: "-100%" }}
-        animate={{ x: "0%" }}
-        transition={{ duration: 0.8, ease: "easeIn" }}
+        // initial={{ x: "-100%" }}
+        // animate={{ x: "0%" }}
+        // transition={{ duration: 0.8, ease: "easeIn" }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.9, duration: 1, ease: "easeIn" }}
         className="min-h-screen z-30 flex flex-col"
         id="mainContainer"
       >

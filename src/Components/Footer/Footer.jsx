@@ -1,7 +1,7 @@
 "use client";
-import { Major_Mono_Display, Pacifico } from "@next/font/google";
 import { motion } from "framer-motion";
 import React from "react";
+import { comfortaa, majorMonoDisplay } from "../../app/fonts.js";
 import {
   GithubIcon,
   InstagramIcon,
@@ -11,17 +11,6 @@ import {
 } from "../Icons";
 import NavLink from "../NavBar/NavLink";
 import "./footerStyles.css";
-
-const pacifico = Pacifico({
-  weight: ["400"],
-  style: ["normal"],
-  subsets: ["latin"],
-});
-const majorMonoDisplay = Major_Mono_Display({
-  weight: ["400"],
-  style: ["normal"],
-  subsets: ["latin"],
-});
 
 const links = [
   { url: "/", title: "Home" },
@@ -44,7 +33,9 @@ function Footer() {
           <h2 className={`text-3xl  ${majorMonoDisplay.className}`}>
             rAj rAndiVe
           </h2>
-          <div className="flex flex-wrap w-full items-end justify-end gap-5">
+          <div
+            className={`flex flex-wrap w-full items-end justify-end gap-5 ${comfortaa.className}`}
+          >
             {links.map((eachlinks) => (
               <NavLink link={eachlinks} key={eachlinks.title} />
             ))}
@@ -121,7 +112,7 @@ function Footer() {
               </a>
             </motion.div>
           </div>
-          <p className="text-sm">
+          <p className={`text-sm ${comfortaa.className}`}>
             Raj Randive is a seasoned virtuoso navigating the realms of Web
             Development, DevOps, Cloud, and AI Solutions with finesse and flair.
           </p>

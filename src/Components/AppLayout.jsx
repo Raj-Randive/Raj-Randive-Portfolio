@@ -13,9 +13,8 @@ function AppLayout({ children }) {
     <AnimatePresence mode="wait">
       <div key={pathName} className="bg-[#131313]">
         <TransitionEffect />
-        {/* <TransitionEffect /> */}
 
-        {/* *******************************************************        ANIMATION DIV FOR PAGE TRANSITIONS */}
+        {/* ******************************************************* ANIMATION DIV FOR PAGE TRANSITIONS */}
         {/* <motion.div
           className="h-screen w-screen fixed bg-stone-400 rounded-b-3xl z-40"
           animate={{ height: "0vh" }}
