@@ -66,7 +66,7 @@ function Navbar() {
 
   return (
     <>
-      <div className="border-b-2 border-slate-600 border-t-0 bg-[#000000] h-full flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 text-base font-semibold text-white z-35">
+      <div className="border-b-2 border-slate-600 border-t-0 bg-[#000000] h-full flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 text-base font-semibold text-white z-40 relative">
         {/* **************** Name ****************  */}
         <div
           className={`md:flex lg:text-3xl text-2xl font-extrabold ${majorMonoDisplay.className}`}
@@ -87,10 +87,14 @@ function Navbar() {
 
         {/******************** Responsive Menu ********************/}
 
-        <div className="" id="menubutton">
+        <div
+          className={`${open ? "fixed" : "absolute"} fixed right-6 z-[35]`}
+          id="menubutton"
+        >
           {/*************** MENU BUTTON ***************/}
+
           <button
-            className="w-7 h-9 flex flex-col justify-evenly z-50 relative"
+            className="sticky w-7 h-9 flex flex-col justify-evenly z-50"
             onClick={() => setOpen((prev) => !prev)}
           >
             <motion.div
@@ -106,7 +110,7 @@ function Navbar() {
             <motion.div
               variants={bottomVariants}
               animate={open ? "open" : "closed"}
-              className="w-7 h-0.5 bg-white rounded origin-left"
+              className="w-7 h-0.5 bg-white rounded origin-left "
             ></motion.div>
           </button>
 
@@ -116,7 +120,7 @@ function Navbar() {
               variants={listVariants}
               initial="closed"
               animate="opened"
-              className="z-40 absolute top-0 left-0 w-screen h-screen bg-black text-white flex flex-col items-center justify-center gap-8 text-3xl"
+              className="z-[32] fixed top-0 left-0 w-screen h-screen bg-black text-white flex flex-col items-center justify-center gap-8 text-3xl"
             >
               {links.map((eachLink) => (
                 <motion.div

@@ -5,7 +5,7 @@ import { CustomGithubIcon } from "./Icons";
 
 const ProjectComponent = ({ type, title, summary, img, link, githublink }) => {
   return (
-    <article className="w-full flex flex-col items-center justify-between rounded-3xl border border-solid border-orange-700 shadow-md  shadow-amber-400 p-6 backdrop-blur-[3px] hover:shadow-amber-600 lg:p-12 lg:flex-row">
+    <article className="w-full flex flex-col items-center justify-between rounded-3xl border border-solid border-white shadow-md  shadow-white p-6 backdrop-blur-[3px]  lg:p-12 lg:flex-row">
       {/* ************* Upper *************  */}
       <Link
         href={link}
