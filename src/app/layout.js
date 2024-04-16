@@ -16,7 +16,7 @@ export default function RootLayout({ children, className = "" }) {
       <body className={inter.className}>
         <div className={`${className} w-full h-full`}>
           <AppLayout>
-            {/* <StartsCanvas /> */}
+            <StartsCanvas />
             {children}
           </AppLayout>
         </div>

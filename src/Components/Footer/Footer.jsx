@@ -22,7 +22,7 @@ const links = [
 function Footer() {
   return (
     <>
-      <div className="h-64 box-border bg-black text-white flex justify-center items-center relative z-35">
+      <div className="h-64 box-border bg-black text-white flex justify-center items-center relative">
         {/* top div LINE*/}
         <div className="w-full absolute top-0 h-0.5 bg-white"></div>
         {/* Left */}
