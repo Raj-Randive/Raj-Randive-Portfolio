@@ -19,12 +19,12 @@ function ContactPage() {
   // ************************************************************
   const formRef = useRef();
 
-  const sendEmail = (e) => {
+  const sendEmail = async (e) => {
     e.preventDefault();
     setError(false);
     setSuccess(false);
 
-    emailjs
+    await emailjs
       .sendForm(
         process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID,
         process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_ID,
