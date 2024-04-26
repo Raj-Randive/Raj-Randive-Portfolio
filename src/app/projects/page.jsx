@@ -19,7 +19,7 @@ function ProjectPage() {
         className="h-full"
       >
         {/************************** CONTAINER **************************/}
-        <main className="text-white flex flex-col justify-center items-center w-full px-12 lg:px-44  pb-32 lg:pb-44">
+        <main className="text-white flex flex-col justify-center items-center w-full px-12 lg:px-44 pb-32 lg:pb-44">
           <AnimatedText
             text="imagination trumps knowledge!"
             className={`!py-8 lg:!p-16 !text-xl lg:!text-5xl  ${majorMonoDisplay.className}`}
