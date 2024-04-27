@@ -30,7 +30,7 @@ function ContactPage() {
         process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_ID,
         formRef.current,
         {
-          publicKey: process.env.NEXT_PUBLIC_KEY,
+          publicKey: "DKregk4bsJ4K4ks34",
         }
       )
       .then(
